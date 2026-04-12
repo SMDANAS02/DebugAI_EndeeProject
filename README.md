@@ -1,165 +1,39 @@
-#  DebugAI — AI Error Debugging Assistant using Endee Vector Database
+# 🚀 Endee Internship 2026 – Submission Repository
 
-A practical AI developer tool that allows programmers to paste error messages and retrieve the most relevant solutions using **semantic search powered by Endee vector database**.
+<div align="center">
 
-This project demonstrates how **vector databases + embeddings** can build intelligent debugging assistants.
+![Endee](https://img.shields.io/badge/Endee-Vector_Database-purple?style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge\&logo=python)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge)
 
----
+### **AI Error Solution Finder**
 
-# 📋 Table of Contents
+*An AI system that detects programming errors and suggests solutions using vector embeddings.*
 
-- Features
-- System Architecture
-- Why Endee?
-- Tech Stack
-- Quick Start
-- Project Structure
-- How It Works
-- Example Usage
-- Author
+</div>
 
 ---
 
-# ✨ Features
+# 👨‍💻 Candidate Information
 
-🔎 Semantic search for programming errors  
-⚡ Fast vector similarity search using **Endee**  
-🧠 Error message embedding using **Sentence Transformers**  
-📂 Dataset of common programming errors and solutions  
-🐳 Docker-based Endee deployment  
-💻 Simple command-line interface for searching solutions
-
----
-
-# 🏗️ System Architecture
-User Error Message
-│
-▼
-Sentence Transformer
-(all-MiniLM-L6-v2)
-│
-▼
-Vector Embedding
-(384 dimension)
-│
-▼
-Endee Vector Database
-(HNSW ANN Search)
-│
-▼
-Most Similar Error + Solution
+| Field               | Details                                 |
+| ------------------- | --------------------------------------- |
+| **Name**            | YOUR NAME                               |
+| **Institution**     | YOUR COLLEGE                            |
+| **Email**           | [your@email.com](mailto:your@email.com) |
+| **GitHub**          | your-github                             |
+| **Submission Date** | April 2026                              |
+| **Project**         | AI Error Solution Finder                |
 
 ---
 
-# 🔷 Why Endee?
+# 🎯 Project Overview
 
-This project uses **Endee vector database** because:
+This project builds an **AI-powered system that analyzes programming errors and suggests solutions automatically**.
 
-| Feature | Benefit |
-|------|------|
-| High-performance ANN search | Very fast similarity search |
-| HNSW indexing | Efficient vector retrieval |
-| Docker deployment | Easy local setup |
-| Metadata support | Store error type, language, tags |
-| Open source | Fully local and privacy-friendly |
+Instead of searching errors manually on Google or StackOverflow, the system uses **vector embeddings and semantic search** to find similar errors from a database.
 
-Endee enables building **AI developer tools without external APIs**.
-
----
-
-# 🛠️ Tech Stack
-
-| Layer | Technology | Purpose |
-|------|------|------|
-| Programming | Python | Main implementation |
-| Vector Database | Endee | Store embeddings |
-| Embedding Model | all-MiniLM-L6-v2 | Convert errors to vectors |
-| ML Library | Sentence Transformers | Generate embeddings |
-| Deployment | Docker | Run Endee server |
-
----
-
-# ⚡ Quick Start
-
-## 1 Install dependencies
-pip install -r requirements.txt
-
-
----
-
-## 2 Start Endee Vector Database
-
-
-docker run -p 8080:8080 endeeio/endee-server
-
-
-Open Endee dashboard:
-
-
-http://localhost:8080
-
-
----
-
-## 3 Insert embeddings into Endee
-
-
-python embed_and_upsert.py
-
-
-This will:
-
-- load dataset
-- generate embeddings
-- insert vectors into Endee
-
----
-
-## 4 Search for errors
-
-
-python search_error.py
-
-
-Example query:
-
-
-ModuleNotFoundError: No module named numpy
-
-
-Output:
-
-
-Similar Error:
-ModuleNotFoundError
-
-Solution:
-Install the package using pip install numpy
-
-
----
-
-# 📁 Project Structure
-
-
-DebugAI_EndeeProject
-│
-├── dataset.json
-├── embed_and_upsert.py
-├── search_error.py
-├── search_error_demo.py
-├── requirements.txt
-└── README.md
-
-
-````markdown
-## ⚙️ How It Works
-
-### Step 1 — Dataset
-
-The project contains a dataset of programming errors and solutions.
-
-Example:
+Example dataset:
 
 ```json
 {
@@ -167,15 +41,99 @@ Example:
   "solution": "Install the package using pip install numpy",
   "language": "Python"
 }
-````
+```
+
+The system converts error messages into **vector embeddings** and stores them in a **vector database**.
+When a new error is given, the system finds **similar errors and their solutions**.
 
 ---
 
-### Step 2 — Embedding
+# 🌟 Key Features
 
-Each error message is converted into a **384-dimensional vector embedding** using:
+### 🔍 Semantic Error Search
 
-`sentence-transformers/all-MiniLM-L6-v2`
+* Finds **similar errors even if the text is different**
+* Uses **vector embeddings**
+* Supports multiple programming languages
+
+Example:
+
+```
+Query: "numpy module missing"
+Result: "ModuleNotFoundError: No module named numpy"
+```
+
+---
+
+### 🤖 AI Based Solution Suggestion
+
+Steps:
+
+```
+User Error
+     ↓
+Embedding Model
+     ↓
+Vector Database Search
+     ↓
+Retrieve Similar Errors
+     ↓
+Return Best Solution
+```
+
+---
+
+# 🏗️ System Architecture
+
+```
+User Input Error
+       ↓
+Embedding Model
+(sentence-transformers)
+       ↓
+Vector Database
+(Endee / FAISS)
+       ↓
+Similarity Search
+       ↓
+Retrieve Solution
+```
+
+---
+
+# ⚙️ Technology Stack
+
+| Layer           | Technology            |
+| --------------- | --------------------- |
+| Embeddings      | sentence-transformers |
+| Vector Database | Endee                 |
+| Backend         | Python                |
+| Dataset         | JSON                  |
+| AI Model        | all-MiniLM-L6-v2      |
+
+---
+
+# 📊 Workflow
+
+### Step 1 — Dataset Creation
+
+Dataset contains **error and solution pairs**.
+
+Example:
+
+```
+Error → Solution
+```
+
+---
+
+### Step 2 — Embedding Generation
+
+Error messages are converted into **384 dimensional vectors** using:
+
+```
+sentence-transformers/all-MiniLM-L6-v2
+```
 
 ---
 
@@ -183,45 +141,99 @@ Each error message is converted into a **384-dimensional vector embedding** usin
 
 Embeddings are stored inside **Endee Vector Database**.
 
-Example structure:
-
-```
-vector_id
-vector_embedding
-metadata:
-  error
-  solution
-  language
-```
-
 ---
 
-### Step 4 — Semantic Search
+### Step 4 — Query Search
 
 When a user enters an error:
 
-* Error message is embedded
-* Endee performs ANN similarity search
-* Top matching errors are returned
-* Best solution is displayed
+1. Convert query to embedding
+2. Perform similarity search
+3. Return closest matching error
+4. Show solution
 
 ---
 
-## 👨‍💻 Author
+# 🚀 Quick Start
 
-**Anas**
+### 1️⃣ Clone Repository
 
-GitHub:
-[https://github.com/SMDANAS02](https://github.com/SMDANAS02)
+```bash
+git clone https://github.com/yourusername/project-name.git
+cd project-name
+```
+
+### 2️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3️⃣ Run Project
+
+```bash
+python main.py
+```
 
 ---
 
-## 🙏 Acknowledgements
+# 📂 Project Structure
 
-* Endee Vector Database
-* Sentence Transformers
-* Open-source ML community
+```
+project/
+│
+├── data/
+│   └── errors.json
+│
+├── embeddings/
+│   └── generate_embeddings.py
+│
+├── search/
+│   └── search_error.py
+│
+├── main.py
+├── requirements.txt
+└── README.md
+```
 
-````
+---
 
+# 📈 Example Usage
+
+Input:
+
+```
+Error: ModuleNotFoundError: numpy
+```
+
+Output:
+
+```
+Solution: Install the package using
+
+pip install numpy
+```
+
+---
+
+# 🎯 Future Improvements
+
+* Support more programming languages
+* Web interface for error search
+* Add LLM explanation for solutions
+* Larger error dataset
+
+---
+
+# 📞 Contact
+
+**Name:** YOUR NAME
+**Email:** [your@email.com](mailto:your@email.com)
+**GitHub:** yourgithub
+
+---
+
+✅ **Project Status: Completed**
+
+---
 
