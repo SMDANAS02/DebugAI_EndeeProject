@@ -151,11 +151,6 @@ DebugAI_EndeeProject
 ├── requirements.txt
 └── README.md
 
-What you pasted is **almost correct**, but GitHub Markdown needs **proper headings and code blocks** to display cleanly. Right now your JSON example and structure are **not inside code blocks**, so it looks messy.
-
-Use this **fixed version** instead.
-
-Copy this into your `README.md` section.
 
 ````markdown
 ## ⚙️ How It Works
@@ -229,20 +224,4 @@ GitHub:
 
 ````
 
-Then commit the change.
-
-```bash
-git add README.md
-git commit -m "Fix README formatting"
-git push
-````
-
-After this, GitHub will show:
-
-* Clean **Step sections**
-* Proper **JSON example box**
-* Proper **vector structure box**
-* Nice **Author and Acknowledgements sections**
-
-If you want, I can also show you **one small README improvement that makes your project look much more professional to recruiters (architecture diagram)**.
 
