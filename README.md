@@ -154,21 +154,6 @@ DebugAI_EndeeProject
 
 ---
 
-## ⚙️ How It Works
-
-### Step 1 — Dataset
-
-The project contains a dataset of programming errors and solutions.
-
-Example:
-
-```json
-{
-  "error": "ModuleNotFoundError: No module named numpy",
-  "solution": "Install the package using pip install numpy",
-  "language": "Python"
-}
-
 
 # ⚙️ How It Works
 
