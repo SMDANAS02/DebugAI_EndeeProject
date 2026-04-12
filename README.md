@@ -154,7 +154,7 @@ DebugAI_EndeeProject
 
 ---
 
-# ⚙️ How It Works
+## ⚙️ How It Works
 
 ### Step 1 — Dataset
 
@@ -169,14 +169,16 @@ Example:
   "language": "Python"
 }
 
-##Step 2 — Embedding
+
+Step 2 — Embedding
 
 Each error message is converted into a 384-dimensional vector embedding using:
 
 sentence-transformers/all-MiniLM-L6-v2
-##Step 3 — Vector Storage
 
-Embeddings are stored inside Endee vector database.
+Step 3 — Vector Storage
+
+Embeddings are stored inside Endee Vector Database.
 
 Example structure:
 
@@ -186,7 +188,8 @@ metadata:
   error
   solution
   language
-##Step 4 — Semantic Search
+
+  Step 4 — Semantic Search
 
 When a user enters an error:
 
@@ -195,7 +198,6 @@ Endee performs ANN similarity search
 Top matching errors are returned
 Best solution is displayed
 💡 Example Use Cases
-
 Developer debugging assistant
 AI coding tools
 Programming help systems
@@ -203,12 +205,12 @@ IDE debugging plugins
 
 👨‍💻 Author
 
-*Anas
+Anas
 
-GitHub: https://github.com/SMDANAS02
+GitHub:
+https://github.com/SMDANAS02
 
-* Acknowledgements
-
+🙏 Acknowledgements
 Endee Vector Database
 Sentence Transformers
 Open-source ML community
