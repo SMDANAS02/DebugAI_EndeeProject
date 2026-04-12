@@ -18,10 +18,10 @@
 
 | Field               | Details                                 |
 | ------------------- | --------------------------------------- |
-| **Name**            | YOUR NAME                               |
-| **Institution**     | YOUR COLLEGE                            |
-| **Email**           | [your@email.com](mailto:your@email.com) |
-| **GitHub**          | your-github                             |
+| **Name**            | Mohamed Anas                            |
+| **Institution**     | V S B engineering college               |
+| **Email**           |smohamedanas02@gmail.com                 |
+| **GitHub**          |https://github.com/SMDANAS0              |
 | **Submission Date** | April 2026                              |
 | **Project**         | AI Error Solution Finder                |
 
@@ -227,9 +227,9 @@ pip install numpy
 
 # 📞 Contact
 
-**Name:** YOUR NAME
-**Email:** [your@email.com](mailto:your@email.com)
-**GitHub:** yourgithub
+**Name:** Mohamed Anas S
+**Email:** smohamedanas@gmail.com
+**GitHub:** https://github.com/SMDANAS02
 
 ---
 
