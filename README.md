@@ -169,11 +169,15 @@ Example:
   "solution": "Install the package using pip install numpy",
   "language": "Python"
 }
+
+--
 Step 2 — Embedding
 
 Each error message is converted into a 384-dimensional vector embedding using:
 
 sentence-transformers/all-MiniLM-L6-v2
+
+----
 
 Step 3 — Vector Storage
 
@@ -187,6 +191,8 @@ metadata:
   error
   solution
   language
+
+---
 Step 4 — Semantic Search
 
 When a user enters an error:
@@ -195,6 +201,7 @@ Error message is embedded
 Endee performs ANN similarity search
 Top matching errors are returned
 Best solution is displayed
+----
 
 👨‍💻 Author
 
@@ -202,6 +209,7 @@ Anas
 
 GitHub:
 https://github.com/SMDANAS02
+---
 
 🙏 Acknowledgements
 Endee Vector Database
