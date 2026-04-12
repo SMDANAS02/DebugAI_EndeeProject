@@ -151,6 +151,13 @@ DebugAI_EndeeProject
 ├── requirements.txt
 └── README.md
 
+What you pasted is **almost correct**, but GitHub Markdown needs **proper headings and code blocks** to display cleanly. Right now your JSON example and structure are **not inside code blocks**, so it looks messy.
+
+Use this **fixed version** instead.
+
+Copy this into your `README.md` section.
+
+````markdown
 ## ⚙️ How It Works
 
 ### Step 1 — Dataset
@@ -165,48 +172,77 @@ Example:
   "solution": "Install the package using pip install numpy",
   "language": "Python"
 }
+````
 
 ---
-Step 2 — Embedding
 
-Each error message is converted into a 384-dimensional vector embedding using:
+### Step 2 — Embedding
 
-sentence-transformers/all-MiniLM-L6-v2
+Each error message is converted into a **384-dimensional vector embedding** using:
+
+`sentence-transformers/all-MiniLM-L6-v2`
 
 ---
-Step 3 — Vector Storage
 
-Embeddings are stored inside Endee Vector Database.
+### Step 3 — Vector Storage
+
+Embeddings are stored inside **Endee Vector Database**.
 
 Example structure:
 
+```
 vector_id
 vector_embedding
 metadata:
   error
   solution
   language
+```
 
-  ---
-  Step 4 — Semantic Search
+---
+
+### Step 4 — Semantic Search
 
 When a user enters an error:
 
-Error message is embedded
-Endee performs ANN similarity search
-Top matching errors are returned
-Best solution is displayed
----
-👨‍💻 Author
+* Error message is embedded
+* Endee performs ANN similarity search
+* Top matching errors are returned
+* Best solution is displayed
 
-Anas
-
-GitHub: https://github.com/SMDANAS02
 ---
 
-🙏 Acknowledgements
-Endee Vector Database
-Sentence Transformers
-Open-source ML community
-----
+## 👨‍💻 Author
+
+**Anas**
+
+GitHub:
+[https://github.com/SMDANAS02](https://github.com/SMDANAS02)
+
+---
+
+## 🙏 Acknowledgements
+
+* Endee Vector Database
+* Sentence Transformers
+* Open-source ML community
+
+````
+
+Then commit the change.
+
+```bash
+git add README.md
+git commit -m "Fix README formatting"
+git push
+````
+
+After this, GitHub will show:
+
+* Clean **Step sections**
+* Proper **JSON example box**
+* Proper **vector structure box**
+* Nice **Author and Acknowledgements sections**
+
+If you want, I can also show you **one small README improvement that makes your project look much more professional to recruiters (architecture diagram)**.
 
