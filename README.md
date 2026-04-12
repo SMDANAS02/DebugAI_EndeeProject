@@ -170,6 +170,20 @@ Example:
 }
 
 
+# ⚙️ How It Works
+
+### Step 1 — Dataset
+
+The project contains a dataset of programming errors and solutions.
+
+Example:
+
+```json
+{
+  "error": "ModuleNotFoundError: No module named numpy",
+  "solution": "Install the package using pip install numpy",
+  "language": "Python"
+}
 Step 2 — Embedding
 
 Each error message is converted into a 384-dimensional vector embedding using:
@@ -188,8 +202,7 @@ metadata:
   error
   solution
   language
-
-  Step 4 — Semantic Search
+Step 4 — Semantic Search
 
 When a user enters an error:
 
@@ -197,11 +210,6 @@ Error message is embedded
 Endee performs ANN similarity search
 Top matching errors are returned
 Best solution is displayed
-💡 Example Use Cases
-Developer debugging assistant
-AI coding tools
-Programming help systems
-IDE debugging plugins
 
 👨‍💻 Author
 
