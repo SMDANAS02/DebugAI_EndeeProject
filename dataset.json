@@ -1,0 +1,352 @@
+[
+  {
+    "id": "err_001",
+    "error": "IndexError: list index out of range",
+    "language": "Python",
+    "solution": "This happens when you try to access an index that doesn't exist in a list. Always check len(list) before accessing by index, or use try/except IndexError. Example fix: if i < len(my_list): print(my_list[i])",
+    "tags": ["python", "list", "index"]
+  },
+  {
+    "id": "err_002",
+    "error": "NullPointerException: Cannot invoke method on null object",
+    "language": "Java",
+    "solution": "Occurs when you try to call a method or access a field on a null object reference. Always null-check before using objects: if (obj != null) { obj.method(); }. Consider using Optional<T> in modern Java.",
+    "tags": ["java", "null", "pointer"]
+  },
+  {
+    "id": "err_003",
+    "error": "ModuleNotFoundError: No module named 'requests'",
+    "language": "Python",
+    "solution": "Python cannot find the module in your environment. Install it using: pip install requests. If using virtual env, activate it first: source venv/bin/activate. Check with: pip list | grep requests",
+    "tags": ["python", "import", "pip", "module"]
+  },
+  {
+    "id": "err_004",
+    "error": "TypeError: unsupported operand type(s) for +: 'int' and 'str'",
+    "language": "Python",
+    "solution": "You are trying to add an integer and a string. Convert types explicitly: str(num) + text, or int(text) + num. Use f-strings for formatting: f'{num} items' instead of num + ' items'.",
+    "tags": ["python", "type", "string", "int"]
+  },
+  {
+    "id": "err_005",
+    "error": "KeyError: 'username' in dictionary",
+    "language": "Python",
+    "solution": "The key doesn't exist in the dictionary. Use dict.get('username', default_value) to safely access keys, or check first: if 'username' in my_dict. You can also use collections.defaultdict.",
+    "tags": ["python", "dictionary", "key"]
+  },
+  {
+    "id": "err_006",
+    "error": "SyntaxError: invalid syntax unexpected token",
+    "language": "Python",
+    "solution": "Python found code it cannot parse. Common causes: missing colon after if/for/def, mismatched parentheses, using Python 2 syntax in Python 3, or a typo. Check the line above the error too.",
+    "tags": ["python", "syntax", "parse"]
+  },
+  {
+    "id": "err_007",
+    "error": "AttributeError: NoneType object has no attribute",
+    "language": "Python",
+    "solution": "A variable you expected to hold an object is None. Check function return values. Functions return None by default. Add a guard: if result is not None: result.method(). Debug with print(type(result)).",
+    "tags": ["python", "none", "attribute"]
+  },
+  {
+    "id": "err_008",
+    "error": "ValueError: invalid literal for int() with base 10",
+    "language": "Python",
+    "solution": "You are trying to convert a string to int but it contains non-numeric characters. Use try/except: try: x = int(s) except ValueError: x = 0. Strip whitespace first: int(s.strip()).",
+    "tags": ["python", "value", "int", "conversion"]
+  },
+  {
+    "id": "err_009",
+    "error": "FileNotFoundError: No such file or directory",
+    "language": "Python",
+    "solution": "The file path doesn't exist or is incorrect. Use os.path.exists() to check first. Use absolute paths or os.path.join() for cross-platform paths. Check your current directory with os.getcwd().",
+    "tags": ["python", "file", "path", "io"]
+  },
+  {
+    "id": "err_010",
+    "error": "RecursionError: maximum recursion depth exceeded",
+    "language": "Python",
+    "solution": "Your recursive function has no base case or the base case is never reached. Add a proper base case. You can increase limit temporarily: sys.setrecursionlimit(2000), but better to convert to iteration.",
+    "tags": ["python", "recursion", "stack"]
+  },
+  {
+    "id": "err_011",
+    "error": "ImportError: cannot import name from module",
+    "language": "Python",
+    "solution": "The name you are trying to import doesn't exist in that module, or there is a circular import. Check module documentation for correct names. For circular imports, restructure code or use lazy imports inside functions.",
+    "tags": ["python", "import", "module"]
+  },
+  {
+    "id": "err_012",
+    "error": "ZeroDivisionError: division by zero",
+    "language": "Python",
+    "solution": "You are dividing by zero. Add a check: if divisor != 0: result = num / divisor. Or use try/except ZeroDivisionError. Safe division: result = num / divisor if divisor else 0.",
+    "tags": ["python", "math", "division"]
+  },
+  {
+    "id": "err_013",
+    "error": "PermissionError: Errno 13 Permission denied",
+    "language": "Python",
+    "solution": "Your process lacks permission to access the file or directory. On Linux/Mac: chmod 755 filename. Check file ownership with ls -la. Ensure you have write access to the directory.",
+    "tags": ["python", "permission", "file"]
+  },
+  {
+    "id": "err_014",
+    "error": "MemoryError: unable to allocate array",
+    "language": "Python",
+    "solution": "Python ran out of RAM. Process data in chunks instead of loading all at once. Use generators instead of lists. For numpy arrays, use memory-mapped files: np.memmap(). Consider pandas chunked reading.",
+    "tags": ["python", "memory", "ram", "numpy"]
+  },
+  {
+    "id": "err_015",
+    "error": "UnicodeDecodeError: codec can't decode byte",
+    "language": "Python",
+    "solution": "File contains characters not in the expected encoding. Open with explicit encoding: open(file, encoding='utf-8'). To ignore errors: open(file, encoding='utf-8', errors='ignore'). Try latin-1 for legacy files.",
+    "tags": ["python", "unicode", "encoding", "file"]
+  },
+  {
+    "id": "err_016",
+    "error": "TimeoutError: connection timed out",
+    "language": "Python",
+    "solution": "Network request took too long. Increase timeout: requests.get(url, timeout=30). Add retry logic with exponential backoff. Check if the server is reachable. Use async requests for multiple concurrent calls.",
+    "tags": ["python", "network", "timeout", "requests"]
+  },
+  {
+    "id": "err_017",
+    "error": "JSONDecodeError: Expecting value line 1 column 1",
+    "language": "Python",
+    "solution": "The string is not valid JSON. Check for empty responses: if response.text: data = json.loads(response.text). Validate JSON at jsonlint.com. Ensure API is returning JSON, not an HTML error page.",
+    "tags": ["python", "json", "parse", "api"]
+  },
+  {
+    "id": "err_018",
+    "error": "AssertionError: assertion failed",
+    "language": "Python",
+    "solution": "An assert statement evaluated to False. This is usually a logic bug. Add a message: assert condition, 'Description of what went wrong'. Check the condition carefully and debug input values.",
+    "tags": ["python", "assert", "testing"]
+  },
+  {
+    "id": "err_019",
+    "error": "ReferenceError: variable is not defined",
+    "language": "JavaScript",
+    "solution": "You are using a variable before declaring it, or there is a typo. Declare with let/const/var before use. Check for typos in variable names. In strict mode, all variables must be declared.",
+    "tags": ["javascript", "variable", "scope"]
+  },
+  {
+    "id": "err_020",
+    "error": "TypeError: Cannot read property of undefined",
+    "language": "JavaScript",
+    "solution": "You are accessing a property on an undefined value. Use optional chaining: obj?.property. Check if data has loaded before accessing. Add null checks: if (obj && obj.property).",
+    "tags": ["javascript", "undefined", "null", "property"]
+  },
+  {
+    "id": "err_021",
+    "error": "CORS error: Access-Control-Allow-Origin header missing",
+    "language": "JavaScript",
+    "solution": "Browser blocks request due to Cross-Origin Resource Sharing policy. Add CORS headers on server side. Use a proxy for development. Do not disable CORS in browser — fix the server.",
+    "tags": ["javascript", "cors", "http", "browser", "api"]
+  },
+  {
+    "id": "err_022",
+    "error": "Unhandled promise rejection",
+    "language": "JavaScript",
+    "solution": "An async operation failed without a catch handler. Always add .catch() to promises or use try/catch with async/await. Add global handler: process.on('unhandledRejection', handler) for Node.js.",
+    "tags": ["javascript", "promise", "async", "await"]
+  },
+  {
+    "id": "err_023",
+    "error": "RangeError: Maximum call stack size exceeded",
+    "language": "JavaScript",
+    "solution": "Infinite recursion or too many nested function calls. Find the base case in your recursive function. Use iteration instead of recursion for large inputs. Check for circular event listeners.",
+    "tags": ["javascript", "stack", "recursion"]
+  },
+  {
+    "id": "err_024",
+    "error": "404 Not Found: requested resource does not exist",
+    "language": "HTTP",
+    "solution": "The URL path doesn't exist on the server. Check the URL for typos. Ensure routes are correctly defined in your backend. For APIs, verify the endpoint in documentation. Check if resource was deleted.",
+    "tags": ["http", "api", "url", "route"]
+  },
+  {
+    "id": "err_025",
+    "error": "500 Internal Server Error",
+    "language": "HTTP",
+    "solution": "Server-side error occurred. Check server logs for the actual error. Common causes: unhandled exceptions, database connection issues, missing environment variables. Enable detailed error reporting in development.",
+    "tags": ["http", "server", "backend"]
+  },
+  {
+    "id": "err_026",
+    "error": "401 Unauthorized: authentication required",
+    "language": "HTTP",
+    "solution": "Request lacks valid authentication. Include Authorization header: Bearer YOUR_TOKEN. Check if token has expired and refresh it. Verify API keys are correctly set in headers.",
+    "tags": ["http", "auth", "token", "api"]
+  },
+  {
+    "id": "err_027",
+    "error": "ConnectionRefusedError: target machine actively refused connection",
+    "language": "Network",
+    "solution": "Nothing is listening on that port. Check if the server is running. Verify the correct port number. Check firewall rules. For Docker, ensure port is mapped correctly.",
+    "tags": ["network", "connection", "port", "socket"]
+  },
+  {
+    "id": "err_028",
+    "error": "SSLError: certificate verify failed",
+    "language": "Python",
+    "solution": "SSL certificate cannot be verified. Update certificates: pip install certifi. Pass verify=True in requests (default). For development only: requests.get(url, verify=False). Never disable SSL in production.",
+    "tags": ["python", "ssl", "certificate", "https"]
+  },
+  {
+    "id": "err_029",
+    "error": "OperationalError: database is locked",
+    "language": "SQLite",
+    "solution": "Another process is writing to the SQLite database. Close other connections. Use connection timeout: sqlite3.connect('db.sqlite', timeout=30). Consider switching to PostgreSQL for concurrent access.",
+    "tags": ["database", "sqlite", "lock", "sql"]
+  },
+  {
+    "id": "err_030",
+    "error": "IntegrityError: UNIQUE constraint failed",
+    "language": "SQL",
+    "solution": "Inserting a duplicate value in a column with UNIQUE constraint. Use INSERT OR IGNORE in SQLite. In PostgreSQL: INSERT ... ON CONFLICT DO NOTHING. Check data before inserting.",
+    "tags": ["database", "sql", "unique", "constraint"]
+  },
+  {
+    "id": "err_031",
+    "error": "OutOfMemoryError: Java heap space",
+    "language": "Java",
+    "solution": "JVM ran out of heap memory. Increase heap: java -Xmx2g YourApp. Check for memory leaks using VisualVM. Avoid storing large collections in memory. Use streaming for large file processing.",
+    "tags": ["java", "memory", "heap", "jvm"]
+  },
+  {
+    "id": "err_032",
+    "error": "git merge conflict both modified",
+    "language": "Git",
+    "solution": "Two branches modified the same file. Open conflicted files and look for <<<<<<, =======, >>>>>> markers. Edit to keep desired changes, then: git add filename and git commit.",
+    "tags": ["git", "merge", "conflict"]
+  },
+  {
+    "id": "err_033",
+    "error": "git push rejected non-fast-forward",
+    "language": "Git",
+    "solution": "Remote has changes you don't have locally. Pull first: git pull --rebase origin main. Then push. Never force push to shared branches.",
+    "tags": ["git", "push", "remote"]
+  },
+  {
+    "id": "err_034",
+    "error": "docker port is already allocated",
+    "language": "Docker",
+    "solution": "Another container or process is using that port. Find it: docker ps. Stop the conflicting container: docker stop container_name. Or use a different host port mapping.",
+    "tags": ["docker", "port", "container"]
+  },
+  {
+    "id": "err_035",
+    "error": "NameError: name is not defined",
+    "language": "Python",
+    "solution": "You are using a variable name that hasn't been assigned yet in the current scope. Check for typos. Ensure the variable is defined before use. For global variables, use the global keyword inside functions.",
+    "tags": ["python", "scope", "variable", "name"]
+  },
+  {
+    "id": "err_036",
+    "error": "IndentationError: unexpected indent",
+    "language": "Python",
+    "solution": "Python is strict about indentation. Use consistent spaces (4 spaces recommended) or tabs — never mix. Set your editor to show whitespace characters.",
+    "tags": ["python", "indentation", "syntax"]
+  },
+  {
+    "id": "err_037",
+    "error": "ConnectionError: failed to establish a new connection",
+    "language": "Python",
+    "solution": "Cannot reach the server. Check internet connectivity. Verify the URL is correct. Test with curl. Check if a VPN or proxy is interfering. The server may be down.",
+    "tags": ["python", "network", "connection", "requests"]
+  },
+  {
+    "id": "err_038",
+    "error": "RuntimeError: CUDA out of memory",
+    "language": "Python",
+    "solution": "GPU has insufficient VRAM. Reduce batch size. Use torch.cuda.empty_cache(). Enable gradient checkpointing. Use mixed precision: model.half(). Consider model quantization.",
+    "tags": ["python", "pytorch", "cuda", "gpu", "ml"]
+  },
+  {
+    "id": "err_039",
+    "error": "pandas SettingWithCopyWarning",
+    "language": "Python",
+    "solution": "You are modifying a copy instead of the original DataFrame. Use .loc for assignment: df.loc[mask, 'col'] = value. Explicitly copy when needed: df2 = df.copy().",
+    "tags": ["python", "pandas", "dataframe"]
+  },
+  {
+    "id": "err_040",
+    "error": "numpy ValueError shapes not aligned for matrix multiplication",
+    "language": "Python",
+    "solution": "Matrix dimensions are incompatible. For dot product, shapes must be (m,n) @ (n,p). Transpose if needed: A.T or np.transpose(A). Print shapes to debug: print(A.shape, B.shape).",
+    "tags": ["python", "numpy", "matrix", "shape", "ml"]
+  },
+  {
+    "id": "err_041",
+    "error": "flask werkzeug routing BuildError route not found",
+    "language": "Python",
+    "solution": "url_for() cannot find the endpoint. Check the function name matches exactly in url_for(). Ensure the Blueprint is registered. Verify the route decorator is correct.",
+    "tags": ["python", "flask", "routing", "web"]
+  },
+  {
+    "id": "err_042",
+    "error": "django.db.utils.OperationalError no such table",
+    "language": "Python",
+    "solution": "Database table doesn't exist. Run migrations: python manage.py makemigrations and python manage.py migrate. Check if you are using the right database in settings.py.",
+    "tags": ["python", "django", "database", "migration"]
+  },
+  {
+    "id": "err_043",
+    "error": "react Cannot update state on unmounted component",
+    "language": "JavaScript",
+    "solution": "Async operation completed after component unmounted. Use cleanup in useEffect: return () => { cancelled = true }. Check cancelled before setState. Use AbortController for fetch requests.",
+    "tags": ["javascript", "react", "state", "async"]
+  },
+  {
+    "id": "err_044",
+    "error": "node ENOENT no such file or directory open",
+    "language": "JavaScript",
+    "solution": "Node.js cannot find the file. Use path.join(__dirname, 'file.txt') for correct paths. Use fs.existsSync() to check before opening. Check your working directory with process.cwd().",
+    "tags": ["javascript", "nodejs", "file", "path"]
+  },
+  {
+    "id": "err_045",
+    "error": "npm ERR peer dep missing incompatible",
+    "language": "JavaScript",
+    "solution": "Package requires a different version of a peer dependency. Run: npm install --legacy-peer-deps. Or update the conflicting package. Use npm ls to see the dependency tree.",
+    "tags": ["javascript", "npm", "dependency", "version"]
+  },
+  {
+    "id": "err_046",
+    "error": "webpack Module not found Error cannot resolve",
+    "language": "JavaScript",
+    "solution": "Webpack cannot find the imported module. Check the import path — it is case-sensitive. Ensure the file exists. For npm packages: npm install package-name. Configure resolve.alias in webpack config.",
+    "tags": ["javascript", "webpack", "module", "import"]
+  },
+  {
+    "id": "err_047",
+    "error": "pip SSL certificate verification failed",
+    "language": "Python",
+    "solution": "pip cannot verify SSL certificate. Update pip: python -m pip install --upgrade pip. Set trusted host: pip install --trusted-host pypi.org package. Check corporate proxy or firewall settings.",
+    "tags": ["python", "pip", "ssl", "install"]
+  },
+  {
+    "id": "err_048",
+    "error": "virtualenv activation fails command not found",
+    "language": "Python",
+    "solution": "Virtual environment not activated properly. On Linux/Mac: source venv/bin/activate. On Windows: .\\venv\\Scripts\\activate. Ensure you created the venv first: python -m venv venv.",
+    "tags": ["python", "virtualenv", "venv", "environment"]
+  },
+  {
+    "id": "err_049",
+    "error": "git detached HEAD state",
+    "language": "Git",
+    "solution": "You checked out a commit directly, not a branch. Create a branch to save work: git checkout -b new-branch-name. To return: git checkout main. Commits in detached HEAD may be lost without a branch.",
+    "tags": ["git", "head", "branch"]
+  },
+  {
+    "id": "err_050",
+    "error": "StopIteration: generator has no more items",
+    "language": "Python",
+    "solution": "You have exhausted a generator or iterator. Use for loops instead of next() manually. If using next(), provide a default: next(gen, None). Reset by recreating the generator if needed.",
+    "tags": ["python", "generator", "iterator"]
+  }
+]
