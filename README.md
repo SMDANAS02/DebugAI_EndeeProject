@@ -168,12 +168,13 @@ Example:
   "solution": "Install the package using pip install numpy",
   "language": "Python"
 }
-Step 2 — Embedding
+
+##Step 2 — Embedding
 
 Each error message is converted into a 384-dimensional vector embedding using:
 
 sentence-transformers/all-MiniLM-L6-v2
-Step 3 — Vector Storage
+##Step 3 — Vector Storage
 
 Embeddings are stored inside Endee vector database.
 
@@ -185,7 +186,7 @@ metadata:
   error
   solution
   language
-Step 4 — Semantic Search
+##Step 4 — Semantic Search
 
 When a user enters an error:
 
@@ -202,7 +203,7 @@ IDE debugging plugins
 
 👨‍💻 Author
 
-Anas
+*Anas
 
 GitHub: https://github.com/SMDANAS02
 
