@@ -21,7 +21,7 @@
 | **Name**            | Mohamed Anas                            |
 | **Institution**     | V S B engineering college               |
 | **Email**           |smohamedanas02@gmail.com                 |
-| **GitHub**          |https://github.com/SMDANAS0              |
+| **GitHub**          |https://github.com/SMDANAS02             |
 | **Submission Date** | April 2026                              |
 | **Project**         | AI Error Solution Finder                |
 
