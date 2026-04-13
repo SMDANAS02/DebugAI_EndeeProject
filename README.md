@@ -228,7 +228,7 @@ pip install numpy
 # 📞 Contact
 
 **Name:** Mohamed Anas S
-**Email:** smohamedanas@gmail.com
+**Email:** smohamedanas02@gmail.com
 **GitHub:** https://github.com/SMDANAS02
 
 ---
